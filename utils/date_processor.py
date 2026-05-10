@@ -22,7 +22,7 @@ def parse_booking_date(date_str: str) -> datetime | None:
     """
     if not date_str:
         return None
-    clean_str = date_str.replace(' ', "")
+    clean_str = date_str.replace(' ', '')
     try:
         naive_dt = datetime.strptime(clean_str, '%d.%m.%YT%H:%M')
         return timezone.make_aware(naive_dt)

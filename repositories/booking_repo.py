@@ -63,7 +63,7 @@ class BookingRepository(BaseRepository[BookingEntity, Booking]):
         bookings = self.model.objects.filter(date__gt=time_min, date__lt=time_max)
         return [self._to_entity(b) for b in bookings]
 
-    def get_conflicts(self, table_id: int, target_time) -> bool:
+    def get_conflicts(self, table_id: int, target_time: datetime) -> bool:
         """
         Checks if a specific table is already booked around a given time.
 
