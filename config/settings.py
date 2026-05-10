@@ -75,10 +75,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LANGUAGE_CODE = "uk"
-TIME_ZONE = "Europe/Kiev"
+TIME_ZONE = "Europe/Kyiv"
 USE_I18N = True
-USE_TZ = False
-USE_L10N = False
+USE_TZ = True
 
 APPEND_SLASH = True
 
