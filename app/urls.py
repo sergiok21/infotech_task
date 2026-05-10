@@ -1,6 +1,8 @@
 from django.urls import path
-from app.views import booking
+from django.views.decorators.csrf import csrf_exempt
+
+from app.views import BookingView
 
 urlpatterns = [
-    path("", booking),
+    path('', csrf_exempt(BookingView.as_view()), name='booking'),
 ]
